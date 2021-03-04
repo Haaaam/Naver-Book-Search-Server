@@ -2,7 +2,7 @@ import os
 import sys
 import urllib.request
 
-def Naverbook(authorname):
+def NaverAuthor(authorname):
     client_id = "27Ajj0rHmLFO5d5Mxfsb"
     client_pw = "tO8tLDsUr5"
     encText = urllib.parse.quote(authorname)

@@ -2,16 +2,16 @@
 
 {% block content %}
 <div>
-    <form action="{{url_for('author.Bookinfo')}}" method="post" class="post-form my-3 ml-3">
+    <form action="{{url_for('author.Authorinfo')}}" method="post" class="post-form my-3 ml-3">
 
             {{ form.csrf_token }}
 
             {{ form.title.label }}
             {{ form.title(class='form-control') }}
-            <button type="submit" class="btn btn-primary my-2">정보 가져오기</button>
+            <button type="submit" class="btn btn-primary my-2">검색</button>
     </form>
 </div>
-{% if book_info_list %}
+{% if author_info_list %}
 <div class="container my-3">
     <table class="table table-hover " style="font-size: 12px" >
         <thead>
@@ -24,7 +24,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for temp in book_info_list %}
+        {% for temp in author_info_list %}
         <tr class="text-center">
              <td>{{ loop.index }}</td>
              <td>{{ temp.title | safe }}</td>

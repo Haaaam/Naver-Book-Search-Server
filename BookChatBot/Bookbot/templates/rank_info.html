@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-3">
+    <form action="{{url_for('rank.Rankinfo')}}" method="post" class="post-form my-3 ml-3">
+            <input type="date" id="currentDate" name="keyword" value="{{keyword}}">
+            <button type="submit" class="btn btn-primary my-2">검색</button>
+    </form>
+</div>
+{% if rank_info_list %}
+<div class="container my-3">
+    <table class="table table-hover " style="font-size: 12px" >
+        <thead>
+            <tr class="text-center thead-dark">
+                <th>순위</th>
+                <th>제목</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for temp in rank_info_list %}
+        <tr class="text-center">
+             <td>{{ loop.index }}</td>
+             <td>{{ temp['title']}}</td>
+
+         </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+{% endblock %}

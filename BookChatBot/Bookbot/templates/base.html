@@ -18,11 +18,18 @@
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('main.Bookinfo') }}">도서명</a>
+                    <a class="nav-link" href="{{ url_for('main.Bookinfo') }}">도서명 검색</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('author.Bookinfo') }}">저자명</a>
+            <a class="nav-link" href="{{ url_for('author.Authorinfo') }}">저자명 검색</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('movie.Movieinfo') }}">영화 검색</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('rank.Rankinfo') }}">영화 순위</a>
+            </li>
+
         </ul>
     </div>
 </nav>
