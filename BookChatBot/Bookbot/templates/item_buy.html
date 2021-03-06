@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>제품명:{{title}}</div>
+<div>가격 : {{lprice}}</div>
+<div>주소: {{form.address}}</div>
+
+<form action="{{url_for('shop.Success')}}" method="post" class="post-form my-3 ml-3">
+            <input type="hidden" name="title" value={{title}}>
+            <input type="hidden" name="price" value={{price}}>
+            <input type="hidden" name="address" value={{form.address.data}}>
+
+            <button type="submit" class="btn btn-primary my-2">구매하기</button>
+
+</form>
+{% endblock %}

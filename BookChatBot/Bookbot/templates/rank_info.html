@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container my-3">
-    <form action="{{url_for('rank.Rankinfo')}}" method="post" class="post-form my-3 ml-3">
+    <form action="{{url_for('movie.Rankinfo')}}" method="post" class="post-form my-3 ml-3">
             <input type="date" id="currentDate" name="keyword" value="{{keyword}}">
             <button type="submit" class="btn btn-primary my-2">검색</button>
     </form>
@@ -12,8 +12,8 @@
     <table class="table table-hover " style="font-size: 12px" >
         <thead>
             <tr class="text-center thead-dark">
-                <th>순위</th>
-                <th>제목</th>
+                <th>rank</th>
+                <th>title</th>
             </tr>
         </thead>
         <tbody>

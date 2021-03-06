@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 
-    <title>네이버 도서검색</title>
+    <title>네이버 검색</title>
 </head>
 <body>
 <!-- 네비게이션바 -->
@@ -27,8 +27,11 @@
             <a class="nav-link" href="{{ url_for('movie.Movieinfo') }}">영화 검색</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('rank.Rankinfo') }}">영화 순위</a>
+            <a class="nav-link" href="{{ url_for('movie.Rankinfo') }}">영화 순위</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('shop.Iteminfo') }}">상품 최저가 검색</a>
+
 
         </ul>
     </div>
